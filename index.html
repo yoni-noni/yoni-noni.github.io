@@ -12,9 +12,10 @@
 		<meta name="description" content="2020년 10월 24일 송도 메리빌리아 프리모소르홀"/>
 		<meta name="twitter:description" content="2020년 10월 24일 송도 메리빌리아 프리모소르홀"/>
 		<meta name="og:description" content="2020년 10월 24일 송도 메리빌리아 프리모소르홀"/>
-		<meta name="twitter:card" content="같이 밥해먹고 오돈도손 잘 살겠습니다.""/>
+		<meta name="twitter:card" content="같이 밥해먹고 오돈도손 잘 살겠습니다."/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="/style.css" type="text/css"/>
+		<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=15psgt2x2p"></script>
 		<style>
 
 		</style>
@@ -48,12 +49,11 @@
 			송도 메리빌리아 프리모소르홀<br>
 			<span id="address">인천 연수구 송도과학로16번길 33-1 트리플스트리트 A동</span>
 		</div>
-		<!-- * 카카오맵 - 지도퍼가기 -->
-		<!-- 1. 지도 노드 -->
+
 		<div align="center" max-width="600px">
-			<!-- * 카카오맵 - 지도퍼가기 -->
-		<div id="daumRoughmapContainer1597653753785" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+			<div id="map" style="width:100%;height:400px;"></div>
 		</div>
+
 		<br>
 		<br>
 		<p id="shuttle">
@@ -81,12 +81,12 @@
 <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
 <script charset="UTF-8">
-	new daum.roughmap.Lander({
-		"timestamp" : "1597653753785",
-		"key" : "2zok9",
-		"mapWidth" : "375",
-		"mapHeight" : "400"
-	}).render();
+	var mapOptions = {
+		center: new naver.maps.LatLng(37.3595704, 127.105399),
+		zoom: 10
+	};
+
+	var map = new naver.maps.Map('map', mapOptions);
 </script>
 	</body>
 </html>
